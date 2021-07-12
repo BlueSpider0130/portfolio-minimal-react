@@ -59,7 +59,7 @@ const CAROUSELS = [
   }
 ];
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
   overflow: 'hidden',
   position: 'relative',
   '&:before, &:after': {
