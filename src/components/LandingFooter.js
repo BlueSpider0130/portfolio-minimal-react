@@ -2,7 +2,7 @@ import { Link as ScrollLink } from 'react-scroll';
 // material
 import { Link, Container, Typography } from '@material-ui/core';
 //
-import Logo from '../Logo';
+import Logo from './Logo';
 
 // ----------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ export default function LandingFooter() {
       <Typography variant="caption">
         © All rights reserved
         <br /> Made by &nbsp;
-        <Link href="https://minimals.cc/">minimals.cc</Link>
+        <Link href="https://freelancer.com/u/Vadimpl">Vadim Postnicov</Link>
       </Typography>
     </Container>
   );

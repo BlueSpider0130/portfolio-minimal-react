@@ -45,7 +45,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
   }
 }));
 
-const HeroOverlayStyle = styled(motion.img)({
+const HeroOverlayStyle = styled('video')({
   zIndex: 9,
   width: '100%',
   height: '100%',
@@ -76,41 +76,43 @@ export default function LandingHero() {
       <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
         <HeroOverlayStyle
           alt="overlay"
-          src="/static/home/overlay.svg"
+          src="/static/home/lights.mp4"
+          autoPlay
+          loop
+          muted
           variants={varFadeIn}
         />
 
-        <HeroImgStyle
+        {/* <HeroImgStyle
           alt="hero"
           src="/static/home/hero.png"
           variants={varFadeInUp}
-        />
+        /> */}
 
         <Container maxWidth="lg">
           <ContentStyle>
             <motion.div variants={varFadeInRight}>
               <Typography variant="h1" sx={{ color: 'common.white' }}>
-                Start a <br />
-                New Project <br /> with
+                We create <br />
+                the future <br /> by
                 <Typography
                   component="span"
                   variant="h1"
                   sx={{ color: 'primary.main' }}
                 >
-                  &nbsp;Minimal
+                  &nbsp;striving for perfection.
                 </Typography>
               </Typography>
             </motion.div>
 
             <motion.div variants={varFadeInRight}>
               <Typography sx={{ py: 5, color: 'common.white' }}>
-                The starting point for your next project based on
-                easy-to-customize Material-UI © helps you build apps faster and
-                better.
+                We do not deliver anything but perfection.We create
+                clients,which creates clients.We give the respect we demand.
               </Typography>
             </motion.div>
 
-            <Box
+            {/* <Box
               component={motion.div}
               variants={varFadeInRight}
               sx={{
@@ -135,9 +137,9 @@ export default function LandingHero() {
               >
                 Preview in Sketch Cloud
               </Link>
-            </Box>
+            </Box> */}
 
-            <motion.div variants={varFadeInRight}>
+            {/* <motion.div variants={varFadeInRight}>
               <Button
                 size="large"
                 variant="contained"
@@ -147,7 +149,7 @@ export default function LandingHero() {
               >
                 Live Preview
               </Button>
-            </motion.div>
+            </motion.div> */}
 
             <Box
               sx={{
@@ -159,27 +161,23 @@ export default function LandingHero() {
             >
               <motion.img
                 variants={varFadeInRight}
-                src="/static/icons/ic_m_sketch.svg"
+                src="/static/icons/ic-home-ar-vr.svg"
               />
               <motion.img
                 variants={varFadeInRight}
-                src="/static/icons/ic_m_figma.svg"
+                src="/static/icons/ic-home-mechanical-eng.svg"
               />
               <motion.img
                 variants={varFadeInRight}
-                src="/static/icons/ic_m_material.svg"
+                src="/static/icons/ic-home-electrical-eng.svg"
               />
               <motion.img
                 variants={varFadeInRight}
-                src="/static/icons/ic_m_react.svg"
+                src="/static/icons/ic-home-industrial-designer.svg"
               />
               <motion.img
                 variants={varFadeInRight}
-                src="/static/icons/ic_m_js.svg"
-              />
-              <motion.img
-                variants={varFadeInRight}
-                src="/static/icons/ic_m_ts.svg"
+                src="/static/icons/ic-home-dashboard.svg"
               />
             </Box>
           </ContentStyle>

@@ -2,7 +2,7 @@
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import { Box, Container, Typography } from '@material-ui/core';
 //
-import { varFadeInUp, MotionInView } from '../animate';
+import { varFadeInUp, MotionInView, varFadeInLeft } from '../animate';
 
 // ----------------------------------------------------------------------
 
@@ -12,12 +12,12 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  maxWidth: 520,
+  // maxWidth: 520,
   margin: 'auto',
   textAlign: 'center',
   [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
-    position: 'absolute'
+    // textAlign: 'left',
+    // position: 'absolute'
   }
 }));
 
@@ -32,27 +32,32 @@ export default function LandingCleanInterfaces() {
             <Typography
               gutterBottom
               variant="overline"
-              sx={{ color: 'text.secondary', display: 'block' }}
+              sx={{ color: 'text.secondary', display: 'flex' }}
             >
-              clean & clear
+              We are here.
             </Typography>
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
             <Typography variant="h2" paragraph>
-              Beautiful, Modern and Clean User Interfaces
+              We are a group of passionate entrepreneurs, which are looking to
+              work together with our clients to bring new and innovative
+              products and services. We work together with great partners to
+              bring new and innovative products to live.
             </Typography>
           </MotionInView>
         </ContentStyle>
 
-        <MotionInView variants={varFadeInUp}>
-          <Box
-            component="img"
-            alt="multipage"
-            src="/static/home/multipage.png"
-            sx={{ m: 'auto' }}
-          />
-        </MotionInView>
+        <Box
+          component="img"
+          alt="theme mode"
+          src="/static/home/background.png"
+          // sx={{
+          //   maxWidth: { md: 'calc(100%)' },
+          //   transform: 'translateZ(0)',
+          //   width: '100%'
+          // }}
+        />
       </Container>
     </RootStyle>
   );

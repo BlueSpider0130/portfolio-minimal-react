@@ -62,8 +62,8 @@ export default function LandingAdvertisement() {
             sx={{ color: 'common.white', mb: 5 }}
           >
             <Typography variant="h2">
-              Get started with
-              <br /> Minimal Kit today
+              Get in touch
+              <br /> Hannevig Solutions
             </Typography>
           </MotionInView>
           <MotionInView variants={varFadeInDown}>
@@ -80,7 +80,7 @@ export default function LandingAdvertisement() {
                 '&:hover': { bgcolor: 'grey.300' }
               }}
             >
-              Purchase Now
+              Contact Now
             </Button>
           </MotionInView>
         </Box>

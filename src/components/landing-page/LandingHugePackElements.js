@@ -45,31 +45,58 @@ const ContentStyle = styled('div')(({ theme }) => ({
   }
 }));
 
-const ScreenStyle = styled(MotionInView)({
+const ScreenStyle = styled(MotionInView)(({ theme }) => ({
   bottom: 0,
   maxWidth: 460,
-  position: 'absolute'
-});
+  position: 'absolute',
+  width: '45%',
+  // transform: 'skewY(-10deg)!important',
+  [theme.breakpoints.up('sm')]: {
+    width: '35%'
+    // transform: [{ skewY: -30 }]
+  }
+}));
+
+const variantScreenLeftMoblieL = {
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '10%', y: 180, opacity: 1, skewY: 10 }
+};
 
 const variantScreenLeftMoblie = {
-  initial: { x: '22%', y: -10, opacity: 0 },
-  animate: { x: 0, y: 0, opacity: 1 }
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '30%', y: 135, opacity: 1, skewY: 10 }
+};
+const variantScreenCenterMobile = {
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '105%', y: 120, opacity: 1, skewY: 10 }
 };
 const variantScreenRightMobile = {
-  initial: { x: '26%', y: -30, opacity: 0 },
-  animate: { x: '48%', y: -40, opacity: 1 }
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '70%', y: 45, opacity: 1, skewY: 10 }
+};
+const variantScreenRightMobileR = {
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '90%', y: 0, opacity: 1, skewY: 10 }
+};
+const variantScreenLeftL = {
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '15%', y: 240, opacity: 1, skewY: 10 }
 };
 const variantScreenLeft = {
-  initial: { x: '30%', y: -30, opacity: 0 },
-  animate: { x: 0, y: 0, opacity: 1 }
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '65%', y: 180, opacity: 1, skewY: 10 }
 };
 const variantScreenCenter = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 }
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '105%', y: 120, opacity: 1, skewY: 10 }
 };
 const variantScreenRight = {
-  initial: { x: '34%', y: -50, opacity: 0 },
-  animate: { x: '64%', y: -80, opacity: 1 }
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '145%', y: 60, opacity: 1, skewY: 10 }
+};
+const variantScreenRightR = {
+  initial: { x: 0, y: 0, opacity: 0, skewY: 10 },
+  animate: { x: '185%', y: 0, opacity: 1, skewY: 10 }
 };
 
 // ----------------------------------------------------------------------
@@ -82,11 +109,19 @@ export default function LandingHugePackElements() {
   const upMd = useMediaQuery(theme.breakpoints.up('md'));
 
   const textAnimate = upMd ? varFadeInRight : varFadeInUp;
+  const screenLeftAnimateL = upSm
+    ? variantScreenLeftL
+    : variantScreenLeftMoblieL;
   const screenLeftAnimate = upSm ? variantScreenLeft : variantScreenLeftMoblie;
-  const screenCenterAnimate = variantScreenCenter;
+  const screenCenterAnimate = upSm
+    ? variantScreenCenter
+    : variantScreenCenterMobile;
   const screenRightAnimate = upSm
     ? variantScreenRight
     : variantScreenRightMobile;
+  const screenRightAnimateR = upSm
+    ? variantScreenRightR
+    : variantScreenRightMobileR;
 
   return (
     <RootStyle>
@@ -100,20 +135,23 @@ export default function LandingHugePackElements() {
                   variant="overline"
                   sx={{ color: 'text.secondary', display: 'block' }}
                 >
-                  Interface Starter Kit
+                  Talent member need!
                 </Typography>
               </MotionInView>
 
               <MotionInView variants={textAnimate}>
                 <Typography variant="h2" paragraph>
-                  Huge Pack of Elements
+                  Our Careers
                 </Typography>
               </MotionInView>
 
               <MotionInView variants={textAnimate}>
                 <Typography sx={{ color: 'text.secondary' }}>
-                  We collected most popular elements. Menu, sliders, buttons,
-                  inputs etc. are all here. Just dive in!
+                  We are looking for talents we can help develop and grow
+                  together with us. If you are driven to be the best, willing to
+                  work hard and passionate about innovation you might be our
+                  next team player. We need positive, productive, result
+                  orientated people, which takes on responsibility and deliver.
                 </Typography>
               </MotionInView>
 
@@ -125,7 +163,7 @@ export default function LandingHugePackElements() {
                   component={RouterLink}
                   to="#"
                 >
-                  View All Components
+                  Contact us to apply
                 </Button>
               </MotionInView>
             </ContentStyle>
@@ -142,23 +180,27 @@ export default function LandingHugePackElements() {
               pl: { sm: '16% !important', md: '0 !important' }
             }}
           >
-            {[...Array(3)].map((screen, index) => (
+            {[...Array(5)].map((screen, index) => (
               <ScreenStyle
                 key={index}
                 threshold={0.72}
                 variants={{
-                  ...(index === 0 && screenLeftAnimate),
-                  ...(index === 1 && screenCenterAnimate),
-                  ...(index === 2 && screenRightAnimate)
+                  ...(index === 0 && screenLeftAnimateL),
+                  ...(index === 1 && screenLeftAnimate),
+                  ...(index === 2 && screenCenterAnimate),
+                  ...(index === 3 && screenRightAnimate),
+                  ...(index === 4 && screenRightAnimateR)
                 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
                 sx={{
-                  ...(index === 0 && { zIndex: 3 }),
-                  ...(index === 2 && { zIndex: 1 }),
-                  ...(index === 1 && {
+                  ...(index === 0 && { zIndex: 5 }),
+                  ...(index === 1 && { zIndex: 4 }),
+                  ...(index === 3 && { zIndex: 2 }),
+                  ...(index === 4 && { zIndex: 1 }),
+                  ...(index === 2 && {
                     position: 'relative',
-                    zIndex: 2,
-                    bottom: { xs: 20, sm: 40 },
+                    zIndex: 3,
+                    // bottom: { xs: 20, sm: 40 },
                     transform: {
                       xs: isRTL ? 'translateX(-24%)' : 'translateX(24%)',
                       sm: isRTL ? 'translateX(-32%)' : 'translateX(32%)'
@@ -172,7 +214,7 @@ export default function LandingHugePackElements() {
                   src={`/static/home/screen_${isLight ? 'light' : 'dark'}_${
                     index + 1
                   }.png`}
-                  sx={{ width: { xs: '80%', sm: '100%' } }}
+                  sx={{ width: { xs: '80%', sm: '100%' }, borderRadius: 5 }}
                 />
               </ScreenStyle>
             ))}

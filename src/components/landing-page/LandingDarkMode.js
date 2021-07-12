@@ -94,7 +94,7 @@ export default function LandingDarkMode() {
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={8}>
+          {/* <Grid item xs={12} md={8}>
             <MotionInView variants={varFadeInLeft}>
               <Box
                 component="img"
@@ -107,7 +107,7 @@ export default function LandingDarkMode() {
                 }}
               />
             </MotionInView>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </RootStyle>

@@ -3,6 +3,7 @@ import { useState, useRef } from 'react';
 import homeFill from '@iconify/icons-eva/home-fill';
 import roundSpeed from '@iconify/icons-ic/round-speed';
 import menu2Fill from '@iconify/icons-eva/menu-2-fill';
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { alpha, experimentalStyled as styled } from '@material-ui/core/styles';
@@ -31,8 +32,10 @@ import MenuPopover from '../../components/MenuPopover';
 // ----------------------------------------------------------------------
 
 const MENU_LINKS = [
-  { title: 'Home', icon: homeFill, href: '/' },
-  { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard }
+  { title: 'Service', icon: homeFill, href: PATH_HOME.service },
+  { title: 'Process', icon: roundSpeed, href: PATH_HOME.process },
+  { title: 'Careers', icon: 'WorkOutlineIcon', href: PATH_HOME.careers },
+  { title: 'About us', icon: roundSpeed, href: PATH_HOME.about }
 ];
 
 const APP_BAR_MOBILE = 64;
@@ -103,7 +106,7 @@ export default function HomeNavbar() {
                 duration: theme.transitions.duration.shortest
               }),
             '&:hover': { opacity: 0.48 },
-            ...(isHome && { color: 'common.white' }),
+            ...(pathname !== link.href && { color: 'common.white' }),
             ...(offset && { color: 'text.primary' })
           }}
         >
@@ -132,7 +135,12 @@ export default function HomeNavbar() {
             sx={{ color: 'text.secondary', py: 1 }}
           >
             <ListItemIcon>
-              <Icon icon={link.icon} width={20} height={20} />
+              {link.icon === 'WorkOutlineIcon' ? (
+                <WorkOutlineIcon />
+              ) : (
+                <Icon icon={link.icon} width={20} height={20} />
+              )}
+              {/* {link.icon === 'WorkOutlineIcon' ? <WorkOutlineIcon /> : <Icon icon={link.icon} width={20} height={20} />} */}
             </ListItemIcon>
             <ListItemText primaryTypographyProps={{ typography: 'body2' }}>
               {link.title}
@@ -169,8 +177,8 @@ export default function HomeNavbar() {
 
           <Hidden mdDown>{renderMenuDesktop}</Hidden>
 
-          <Button variant="contained" target="_blank" href={PATH_HOME.purchase}>
-            Purchase Now
+          <Button variant="contained" target="_blank" href={PATH_HOME.contact}>
+            Contact
           </Button>
 
           <Hidden mdUp>
