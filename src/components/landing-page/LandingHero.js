@@ -1,19 +1,14 @@
-import { Icon } from '@iconify/react';
+// import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
-import flashFill from '@iconify/icons-eva/flash-fill';
-import { Link as RouterLink } from 'react-router-dom';
+// import flashFill from '@iconify/icons-eva/flash-fill';
+// import { Link as RouterLink } from 'react-router-dom';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Button, Box, Link, Container, Typography } from '@material-ui/core';
+import { Box, Container, Typography } from '@material-ui/core';
 // routes
-import { PATH_DASHBOARD, PATH_HOME } from '../../routes/paths';
+// import { PATH_DASHBOARD, PATH_HOME } from '../../routes/paths';
 //
-import {
-  varFadeIn,
-  varWrapEnter,
-  varFadeInUp,
-  varFadeInRight
-} from '../animate';
+import { varFadeIn, varWrapEnter, varFadeInRight } from '../animate';
 
 // ----------------------------------------------------------------------
 
@@ -53,20 +48,20 @@ const HeroOverlayStyle = styled('video')({
   position: 'absolute'
 });
 
-const HeroImgStyle = styled(motion.img)(({ theme }) => ({
-  top: 0,
-  right: 0,
-  bottom: 0,
-  zIndex: 8,
-  width: '100%',
-  margin: 'auto',
-  position: 'absolute',
-  [theme.breakpoints.up('lg')]: {
-    right: '8%',
-    width: 'auto',
-    height: '72vh'
-  }
-}));
+// const HeroImgStyle = styled(motion.img)(({ theme }) => ({
+//   top: 0,
+//   right: 0,
+//   bottom: 0,
+//   zIndex: 8,
+//   width: '100%',
+//   margin: 'auto',
+//   position: 'absolute',
+//   [theme.breakpoints.up('lg')]: {
+//     right: '8%',
+//     width: 'auto',
+//     height: '72vh'
+//   }
+// }));
 
 // ----------------------------------------------------------------------
 

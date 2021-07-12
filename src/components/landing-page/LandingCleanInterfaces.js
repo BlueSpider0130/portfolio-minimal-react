@@ -2,7 +2,7 @@
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import { Box, Container, Typography } from '@material-ui/core';
 //
-import { varFadeInUp, MotionInView, varFadeInLeft } from '../animate';
+import { varFadeInUp, MotionInView } from '../animate';
 
 // ----------------------------------------------------------------------
 

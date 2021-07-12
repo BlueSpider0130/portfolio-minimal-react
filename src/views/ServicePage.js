@@ -5,7 +5,7 @@ import { experimentalStyled as styled } from '@material-ui/core/styles';
 import Page from '../components/Page';
 import { ServiceHero } from '../components/service';
 import LandingFooter from '../components/LandingFooter';
-import { CarouselBasic1, CarouselCenterMode } from '../components/carousel';
+import { CarouselCenterMode } from '../components/carousel';
 
 // ----------------------------------------------------------------------
 

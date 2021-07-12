@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
 //
 import HomeNavbar from './HomeNavbar';
-import LandingFooter from '../../components/LandingFooter';
+// import LandingFooter from '../../components/LandingFooter';
 
 // ----------------------------------------------------------------------
 

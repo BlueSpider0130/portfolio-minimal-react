@@ -71,7 +71,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   }
 }));
 
-const MotionStyle = styled('div')(({ theme }) => ({
+const MotionStyle = styled('div')(() => ({
   height: '100%'
 }));
 

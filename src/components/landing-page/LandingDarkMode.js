@@ -4,12 +4,7 @@ import { Box, Grid, Container, Typography, Switch } from '@material-ui/core';
 // hooks
 import useSettings from '../../hooks/useSettings';
 //
-import {
-  varFadeInUp,
-  MotionInView,
-  varFadeInLeft,
-  varFadeInRight
-} from '../animate';
+import { varFadeInUp, MotionInView, varFadeInRight } from '../animate';
 
 // ----------------------------------------------------------------------
 

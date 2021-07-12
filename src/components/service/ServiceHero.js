@@ -4,9 +4,9 @@ import flashFill from '@iconify/icons-eva/flash-fill';
 import { Link as RouterLink } from 'react-router-dom';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Button, Box, Link, Container, Typography } from '@material-ui/core';
+import { Button, Box, Container, Typography } from '@material-ui/core';
 // routes
-import { PATH_DASHBOARD, PATH_HOME } from '../../routes/paths';
+import { PATH_DASHBOARD } from '../../routes/paths';
 //
 import {
   varFadeIn,
