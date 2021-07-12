@@ -4,31 +4,60 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
-import { Icon } from '@iconify/react';
-import { Link as RouterLink } from 'react-router-dom';
-import arrowForwardFill from '@iconify/icons-eva/arrow-forward-fill';
+// import { Icon } from '@iconify/react';
+// import { Link as RouterLink } from 'react-router-dom';
+// import arrowForwardFill from '@iconify/icons-eva/arrow-forward-fill';
 // material
 import {
   alpha,
   useTheme,
   experimentalStyled as styled
 } from '@material-ui/core/styles';
-import { Box, Paper, Link, Typography, CardContent } from '@material-ui/core';
+import { Paper, Typography, CardContent } from '@material-ui/core';
 // utils
 import { mockImgFeed } from '../../utils/mockImages';
 //
 import { CarouselControlsArrowsBasic2 } from './controls';
+import { varFadeInUp, MotionInView } from '../animate';
 
 // ----------------------------------------------------------------------
 
-const CAROUSELS = [...Array(5)].map((_, index) => {
-  const setIndex = index + 1;
-  return {
-    title: faker.name.title(),
-    description: faker.lorem.paragraphs(),
-    image: mockImgFeed(setIndex)
-  };
-});
+// const CAROUSELS = [...Array(5)].map((item, index) => {
+//   const setIndex = index + 1;
+//   return {
+//     title: faker.name.title(),
+//     description: faker.lorem.paragraphs(),
+//     image: mockImgFeed(setIndex)
+//   };
+// });
+
+const CAROUSELS = [
+  {
+    title: 'Porotype design & Development',
+    description: 'faker.lorem.paragraphs()',
+    image: mockImgFeed(1)
+  },
+  {
+    title: 'AR & VR',
+    description: 'faker.lorem.paragraphs()',
+    image: mockImgFeed(2)
+  },
+  {
+    title: 'Engineering',
+    description: 'faker.lorem.paragraphs()',
+    image: mockImgFeed(3)
+  },
+  {
+    title: 'Manufacturing',
+    description: 'faker.lorem.paragraphs()',
+    image: mockImgFeed(4)
+  },
+  {
+    title: 'Recruitment & Team management',
+    description: 'faker.lorem.paragraphs()',
+    image: mockImgFeed(5)
+  }
+];
 
 const RootStyle = styled('div')(({ theme }) => ({
   overflow: 'hidden',
@@ -41,12 +70,7 @@ const RootStyle = styled('div')(({ theme }) => ({
     content: "''",
     height: '100%',
     display: 'none',
-    position: 'absolute',
-    backgroundImage:
-      'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
-    [theme.breakpoints.up(480)]: {
-      display: 'block'
-    }
+    position: 'absolute'
   },
   '&:after': {
     right: 0,
@@ -106,7 +130,7 @@ function CarouselItem({ item }) {
         <Typography variant="h4" paragraph>
           {title}
         </Typography>
-        <Link
+        {/* <Link
           to="#"
           color="inherit"
           variant="overline"
@@ -125,7 +149,7 @@ function CarouselItem({ item }) {
             icon={arrowForwardFill}
             sx={{ width: 16, height: 16, ml: 1 }}
           />
-        </Link>
+        </Link> */}
       </CardContent>
     </Paper>
   );
@@ -167,7 +191,32 @@ export default function CarouselCenterMode() {
 
   return (
     <RootStyle>
-      <Slider ref={carouselRef} {...settings}>
+      <MotionInView variants={varFadeInUp}>
+        <Typography
+          gutterBottom
+          variant="overline"
+          align="center"
+          sx={{
+            color: 'text.secondary',
+            display: 'block',
+            fontSize: 55,
+            marginTop: 5
+          }}
+        >
+          Here is our service
+        </Typography>
+      </MotionInView>
+      <Slider
+        ref={carouselRef}
+        {...settings}
+        sx={{
+          backgroundImage:
+            'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+          [theme.breakpoints.up(480)]: {
+            display: 'block'
+          }
+        }}
+      >
         {CAROUSELS.map((item) => (
           <CarouselItem key={item.title} item={item} />
         ))}

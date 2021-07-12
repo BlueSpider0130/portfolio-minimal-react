@@ -23,7 +23,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function ServicePage() {
   return (
-    <RootStyle title="Hannevig | Solutions" id="Service">
+    <RootStyle title="Hannevig | Solutions" id="move_top">
       <ServiceHero />
       <ContentStyle>
         <CarouselCenterMode />
