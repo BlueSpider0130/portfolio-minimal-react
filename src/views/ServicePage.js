@@ -1,7 +1,6 @@
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 
-import { Card, CardHeader, CardContent } from '@material-ui/core';
 // components
 import Page from '../components/Page';
 import { ServiceHero } from '../components/service';
