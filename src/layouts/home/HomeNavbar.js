@@ -177,7 +177,7 @@ export default function HomeNavbar() {
 
           <Hidden mdDown>{renderMenuDesktop}</Hidden>
 
-          <Button variant="contained" target="_blank" href={PATH_HOME.contact}>
+          <Button variant="contained" href={PATH_HOME.contact}>
             Contact
           </Button>
 

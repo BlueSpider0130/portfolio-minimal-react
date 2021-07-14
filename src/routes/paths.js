@@ -16,7 +16,7 @@ export const PATH_HOME = {
   service: '/service',
   process: '/process',
   careers: '/careers',
-  about: '/about',
+  about: '/aboutus',
   contact: '/contact'
 };
 

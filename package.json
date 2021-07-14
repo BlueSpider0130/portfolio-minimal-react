@@ -68,6 +68,7 @@
     "axios": "^0.21.1",
     "axios-mock-adapter": "^1.19.0",
     "change-case": "^4.1.2",
+    "clsx": "^1.1.1",
     "d3-array": "^2.12.1",
     "d3-scale": "^3.2.4",
     "date-fns": "^2.21.1",

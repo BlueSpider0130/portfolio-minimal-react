@@ -5,7 +5,7 @@ import { experimentalStyled as styled } from '@material-ui/core/styles';
 import Page from '../components/Page';
 // import { TimeLine } from '../components/process';
 import LandingFooter from '../components/LandingFooter';
-import { CarrersHero } from '../components/carrers';
+import { CarrersHero, CarrersPlat } from '../components/carrers';
 
 // ----------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ export default function CareersPage() {
     <RootStyle title="Hannevig | Solutions" id="move_top">
       <CarrersHero />
       <ContentStyle>
-        {/* <TimeLine /> */}
+        <CarrersPlat />
         <LandingFooter />
       </ContentStyle>
     </RootStyle>

@@ -29,6 +29,16 @@ const HomeRoutes = {
       path: '/careers',
       component: lazy(() => import('../views/CareersPage'))
     },
+    {
+      exact: true,
+      path: '/aboutus',
+      component: lazy(() => import('../views/AboutusPage'))
+    },
+    {
+      exact: true,
+      path: '/contact',
+      component: lazy(() => import('../views/ContactPage'))
+    },
 
     // ----------------------------------------------------------------------
 
