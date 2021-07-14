@@ -8,17 +8,12 @@ import LandingFooter from '../components/LandingFooter';
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled(Page)(({ theme }) => ({
+const RootStyle = styled(Page)(() => ({
   // paddingTop: theme.spacing(8),
   // [theme.breakpoints.up('md')]: {
   //   paddingTop: theme.spacing(11)
   // }
   height: '100%'
-}));
-const ContentStyle = styled('div')(({ theme }) => ({
-  overflow: 'hidden',
-  position: 'relative',
-  backgroundColor: theme.palette.background.default
 }));
 
 // ----------------------------------------------------------------------

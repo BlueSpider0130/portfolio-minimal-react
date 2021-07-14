@@ -1,4 +1,3 @@
-import faker from 'faker';
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
 import { useState, useRef, useEffect } from 'react';
@@ -6,7 +5,6 @@ import { useState, useRef, useEffect } from 'react';
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 // utils
-import { mockImgFeed } from '../../utils/mockImages';
 //
 import { CarouselControlsArrowsIndex } from './controls';
 

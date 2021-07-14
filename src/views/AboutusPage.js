@@ -4,7 +4,7 @@ import { experimentalStyled as styled } from '@material-ui/core/styles';
 // components
 import Page from '../components/Page';
 import LandingFooter from '../components/LandingFooter';
-import { AboutusHero, AboutusPlat } from '../components/aboutus';
+import { AboutusPlat } from '../components/aboutus';
 import { CarouselThumbnail } from '../components/carousel';
 
 // ----------------------------------------------------------------------
