@@ -3,9 +3,9 @@ import { experimentalStyled as styled } from '@material-ui/core/styles';
 
 // components
 import Page from '../components/Page';
-import { TimeLine } from '../components/process';
+// import { TimeLine } from '../components/process';
 import LandingFooter from '../components/LandingFooter';
-import ProcessHero from '../components/process/ProcessHero';
+import { CarrersHero } from '../components/carrers';
 
 // ----------------------------------------------------------------------
 
@@ -21,12 +21,12 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function ServicePage() {
+export default function CareersPage() {
   return (
     <RootStyle title="Hannevig | Solutions" id="move_top">
-      <ProcessHero />
+      <CarrersHero />
       <ContentStyle>
-        <TimeLine />
+        {/* <TimeLine /> */}
         <LandingFooter />
       </ContentStyle>
     </RootStyle>

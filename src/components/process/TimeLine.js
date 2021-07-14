@@ -1,28 +1,29 @@
-import { last, slice } from 'lodash';
+// import { last, slice } from 'lodash';
 // material
-import HotelIcon from '@material-ui/icons/Hotel';
-import RepeatIcon from '@material-ui/icons/Repeat';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
+// import HotelIcon from '@material-ui/icons/Hotel';
+// import RepeatIcon from '@material-ui/icons/Repeat';
+// import FastfoodIcon from '@material-ui/icons/Fastfood';
+// import LaptopMacIcon from '@material-ui/icons/LaptopMac';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 import {
   Box,
   Grid,
   Paper,
-  Container,
+  // Container,
   Typography,
-  CardContent
+  // CardContent,
+  useMediaQuery
 } from '@material-ui/core';
 import {
   Timeline,
-  TimelineDot,
+  // TimelineDot,
   TimelineItem,
   TimelineContent,
   TimelineSeparator,
   TimelineConnector,
   TimelineOppositeContent
 } from '@material-ui/lab';
-import { motion } from 'framer-motion';
-import { varFadeIn, varWrapEnter, varFadeInRight } from '../animate';
+// import { varFadeIn, varWrapEnter, varFadeInRight } from '../animate';
 // routes
 // components
 import Block from '../Block';
@@ -32,6 +33,7 @@ function renderImage(src) {
   return <Box component="img" src={src} sx={{ maxWidth: 50 }} />;
 }
 
+// .MuiTimelineItem-missingOppositeContent:before
 const TIMELINES = [
   {
     key: 1,
@@ -54,7 +56,7 @@ const TIMELINES = [
     key: 3,
     title: 'Prototype development',
     des:
-      'Morbi mattis ullamcorperWe strive to make products and solutions above the expectations of our clients. We provide a working prototype. We test the functionalities; evaluate different solutions, material and solutions. We work together our clients to constantly improve the  prototype towards perfection.',
+      'We strive to make products and solutions above the expectations of our clients. We provide a working prototype. We test the functionalities; evaluate different solutions, material and solutions. We work together our clients to constantly improve the  prototype towards perfection.',
     time: 'Prototype development',
     color: 'info',
     icon: renderImage('/static/icons/worker.svg')
@@ -87,21 +89,61 @@ const TIMELINES = [
     icon: renderImage('/static/icons/management.svg')
   }
 ];
+
+// const TimelineItemStyle = withStyles({
+//   root: {
+//     [theme.breakpoints.down('md')]: { flex: 'block' },
+//     '&::before': {
+//       padding: 0
+//     }
+//   }
+// })(TimelineItem);
+const TimelineItemStyle = withStyles((theme) => ({
+  root: {
+    [theme.breakpoints.down('md')]: { display: 'block!important' },
+    '&::before': {
+      padding: 0
+    }
+  }
+}))(TimelineItem);
+
 export default function TimelineComponent() {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  console.log('this is desktop:', isDesktop);
   return (
     <Grid item xs={12}>
       <Block
-        title="Customized"
-        sx={{ width: '80%', margin: 'auto', marginTop: 8 }}
+        sx={{
+          width: '90%',
+          margin: 'auto',
+          marginTop: 10,
+          [theme.breakpoints.down('md')]: { width: '100%' }
+        }}
       >
-        <Timeline align="alternate">
+        <Typography
+          gutterBottom
+          variant="overline"
+          align="center"
+          sx={{
+            color: 'text.secondary',
+            display: 'block',
+            fontSize: 55,
+            marginTop: 5
+          }}
+        >
+          Here is our workflow
+        </Typography>
+        <Timeline align={isDesktop ? 'alternate' : 'left'}>
           {TIMELINES.map((item) => (
-            <TimelineItem key={item.key}>
-              <TimelineOppositeContent>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  {item.time}
-                </Typography>
-              </TimelineOppositeContent>
+            <TimelineItemStyle key={item.key}>
+              {isDesktop && (
+                <TimelineOppositeContent>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {item.time}
+                  </Typography>
+                </TimelineOppositeContent>
+              )}
               <TimelineSeparator>
                 <MTimelineDot color={item.color}>{item.icon}</MTimelineDot>
                 <TimelineConnector />
@@ -110,7 +152,8 @@ export default function TimelineComponent() {
                 <Paper
                   sx={{
                     p: 3,
-                    bgcolor: 'grey.50012'
+                    bgcolor: 'grey.50012',
+                    width: '100%'
                   }}
                 >
                   <Typography variant="subtitle2">{item.title}</Typography>
@@ -119,7 +162,7 @@ export default function TimelineComponent() {
                   </Typography>
                 </Paper>
               </TimelineContent>
-            </TimelineItem>
+            </TimelineItemStyle>
           ))}
         </Timeline>
       </Block>

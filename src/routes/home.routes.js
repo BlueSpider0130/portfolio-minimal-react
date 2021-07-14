@@ -24,6 +24,11 @@ const HomeRoutes = {
       path: '/process',
       component: lazy(() => import('../views/ProcessPage'))
     },
+    {
+      exact: true,
+      path: '/careers',
+      component: lazy(() => import('../views/CareersPage'))
+    },
 
     // ----------------------------------------------------------------------
 
