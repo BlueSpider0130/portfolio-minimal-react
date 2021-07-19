@@ -8,7 +8,7 @@ export default function Logo({ ...other }) {
     <Box
       component="img"
       alt="logo"
-      src="/static/brand/logo_single.svg"
+      src="/static/brand/logo.png"
       height={40}
       {...other}
     />
