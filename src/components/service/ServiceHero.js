@@ -6,7 +6,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import { Button, Box, Container, Typography } from '@material-ui/core';
 // routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+import { PATH_HOME } from '../../routes/paths';
 //
 import {
   varFadeIn,
@@ -113,7 +113,7 @@ export default function LandingHero() {
                 size="large"
                 variant="contained"
                 component={RouterLink}
-                to={PATH_DASHBOARD.root}
+                to={PATH_HOME.contact}
                 startIcon={<Icon icon={flashFill} width={20} height={20} />}
               >
                 Contact Us
