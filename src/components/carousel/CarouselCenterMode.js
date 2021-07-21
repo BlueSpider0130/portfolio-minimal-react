@@ -18,7 +18,7 @@ import { Paper, Typography, CardContent } from '@material-ui/core';
 import { mockImgFeed } from '../../utils/mockImages';
 //
 import { CarouselControlsArrowsBasic2 } from './controls';
-import { varFadeInUp, MotionInView } from '../animate';
+// import { varFadeInUp, MotionInView } from '../animate';
 
 // ----------------------------------------------------------------------
 
