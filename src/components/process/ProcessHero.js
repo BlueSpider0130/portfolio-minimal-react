@@ -91,14 +91,14 @@ export default function ProcessHero() {
           <ContentStyle>
             <motion.div variants={varFadeInRight}>
               <Typography variant="h1" sx={{ color: 'common.white' }}>
-                We do not deliver
-                <br /> anything but
+                We work cost effectivlty and time efficent
+                <br /> by following our
                 <Typography
                   component="span"
                   variant="h1"
                   sx={{ color: 'primary.main' }}
                 >
-                  &nbsp;perfection.
+                  &nbsp;process
                 </Typography>
               </Typography>
             </motion.div>
