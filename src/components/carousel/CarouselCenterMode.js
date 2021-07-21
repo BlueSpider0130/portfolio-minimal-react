@@ -62,6 +62,8 @@ const CAROUSELS = [
 const RootStyle = styled('div')(() => ({
   overflow: 'hidden',
   position: 'relative',
+  width: '90%',
+  margin: 'auto',
   '&:before, &:after': {
     top: 0,
     left: 0,
@@ -191,21 +193,6 @@ export default function CarouselCenterMode() {
 
   return (
     <RootStyle>
-      <MotionInView variants={varFadeInUp}>
-        <Typography
-          gutterBottom
-          variant="overline"
-          align="center"
-          sx={{
-            color: 'text.secondary',
-            display: 'block',
-            fontSize: 55,
-            marginTop: 5
-          }}
-        >
-          Here is our service
-        </Typography>
-      </MotionInView>
       <Slider
         ref={carouselRef}
         {...settings}

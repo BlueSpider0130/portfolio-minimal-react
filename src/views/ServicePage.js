@@ -3,7 +3,7 @@ import { experimentalStyled as styled } from '@material-ui/core/styles';
 
 // components
 import Page from '../components/Page';
-import { ServiceHero } from '../components/service';
+import { ServiceHero, ServicePlat } from '../components/service';
 import LandingFooter from '../components/LandingFooter';
 import { CarouselCenterMode } from '../components/carousel';
 
@@ -26,6 +26,7 @@ export default function ServicePage() {
     <RootStyle title="Hannevig | Solutions" id="move_top">
       <ServiceHero />
       <ContentStyle>
+        <ServicePlat />
         <CarouselCenterMode />
         <LandingFooter />
       </ContentStyle>

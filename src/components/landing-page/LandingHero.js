@@ -100,12 +100,12 @@ export default function LandingHero() {
               </Typography>
             </motion.div>
 
-            <motion.div variants={varFadeInRight}>
+            {/* <motion.div variants={varFadeInRight}>
               <Typography sx={{ py: 5, color: 'common.white' }}>
                 We do not deliver anything but perfection.We create
                 clients,which creates clients.We give the respect we demand.
               </Typography>
-            </motion.div>
+            </motion.div> */}
 
             {/* <Box
               component={motion.div}
@@ -146,7 +146,7 @@ export default function LandingHero() {
               </Button>
             </motion.div> */}
 
-            <Box
+            {/* <Box
               sx={{
                 mt: 5,
                 display: 'flex',
@@ -174,7 +174,7 @@ export default function LandingHero() {
                 variants={varFadeInRight}
                 src="/static/icons/ic-home-dashboard.svg"
               />
-            </Box>
+            </Box> */}
           </ContentStyle>
         </Container>
       </RootStyle>
