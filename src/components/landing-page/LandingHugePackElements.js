@@ -141,7 +141,7 @@ export default function LandingHugePackElements() {
 
               <MotionInView variants={textAnimate}>
                 <Typography variant="h2" paragraph>
-                  Our Careers
+                  Careers
                 </Typography>
               </MotionInView>
 
@@ -163,7 +163,7 @@ export default function LandingHugePackElements() {
                   component={RouterLink}
                   to="#"
                 >
-                  Contact us to apply
+                  Apply
                 </Button>
               </MotionInView>
             </ContentStyle>

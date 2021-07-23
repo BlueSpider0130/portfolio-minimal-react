@@ -62,7 +62,7 @@ export default function LandingAdvertisement() {
             sx={{ color: 'common.white', mb: 5 }}
           >
             <Typography variant="h2">
-              Get in touch
+              Contact
               <br /> Hannevig Solutions
             </Typography>
           </MotionInView>
@@ -80,7 +80,7 @@ export default function LandingAdvertisement() {
                 '&:hover': { bgcolor: 'grey.300' }
               }}
             >
-              Contact Now
+              Contact
             </Button>
           </MotionInView>
         </Box>

@@ -34,16 +34,15 @@ export default function LandingCleanInterfaces() {
               variant="overline"
               sx={{ color: 'text.secondary', display: 'flex' }}
             >
-              We are here.
+              Who we are
             </Typography>
           </MotionInView>
 
           <MotionInView variants={varFadeInUp}>
             <Typography variant="h2" paragraph>
-              We are a group of passionate entrepreneurs, which are looking to
-              work together with our clients to bring new and innovative
-              products and services. We work together with great partners to
-              bring new and innovative products to live.
+              We which are a groupe of passionate professionals which are
+              constantly looking to work and strivng for innovation through
+              creating new products and solutions.with a winning mentality.
             </Typography>
           </MotionInView>
         </ContentStyle>
