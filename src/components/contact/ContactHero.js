@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Box, Container, Typography, Grid } from '@material-ui/core';
+import { Box, Container } from '@material-ui/core';
 //
 import {
-  varFadeIn,
+  // varFadeIn,
   varWrapEnter,
   varFadeInRight,
   TextAnimate
@@ -12,28 +12,28 @@ import {
 
 // ----------------------------------------------------------------------
 
-const CONTACTS = [
-  {
-    country: 'Bali',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(239) 555-0108'
-  },
-  {
-    country: 'London',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(319) 555-0115'
-  },
-  {
-    country: 'Prague',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(252) 555-0126'
-  },
-  {
-    country: 'Moscow',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(307) 555-0133'
-  }
-];
+// const CONTACTS = [
+//   {
+//     country: 'Bali',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(239) 555-0108'
+//   },
+//   {
+//     country: 'London',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(319) 555-0115'
+//   },
+//   {
+//     country: 'Prague',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(252) 555-0126'
+//   },
+//   {
+//     country: 'Moscow',
+//     address: '508 Bridle Avenue Newnan, GA 30263',
+//     phoneNumber: '(307) 555-0133'
+//   }
+// ];
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
