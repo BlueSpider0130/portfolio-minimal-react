@@ -2,6 +2,7 @@
 import { Button, Typography, TextField, Stack } from '@material-ui/core';
 //
 import { varFadeInUp, MotionInView } from '../animate';
+import UploadSingleFile from './UploadSingleFile';
 
 // ----------------------------------------------------------------------
 
@@ -10,8 +11,7 @@ export default function ContactForm() {
     <Stack spacing={5}>
       <MotionInView variants={varFadeInUp}>
         <Typography variant="h3">
-          Feel free to contact us. <br />
-          We'll be glad to hear from you, buddy.
+          Looking forward to see your project
         </Typography>
       </MotionInView>
 
@@ -35,6 +35,9 @@ export default function ContactForm() {
             multiline
             rows={4}
           />
+        </MotionInView>
+        <MotionInView variants={varFadeInUp}>
+          <UploadSingleFile />
         </MotionInView>
       </Stack>
 

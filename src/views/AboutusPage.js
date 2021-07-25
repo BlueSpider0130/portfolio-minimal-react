@@ -7,9 +7,9 @@ import Page from '../components/Page';
 import {
   AboutHero,
   AboutWhat,
-  AboutTeam,
-  AboutVision,
-  AboutTestimonials
+  // AboutTeam,
+  AboutVision
+  // AboutTestimonials
 } from '../components/aboutus';
 
 // ----------------------------------------------------------------------
@@ -31,8 +31,8 @@ export default function About() {
         orientation="vertical"
         sx={{ my: 10, mx: 'auto', width: 2, height: 40 }}
       />
-      <AboutTeam />
-      <AboutTestimonials />
+      {/* <AboutTeam /> */}
+      {/* <AboutTestimonials /> */}
       <LandingFooter />
     </RootStyle>
   );

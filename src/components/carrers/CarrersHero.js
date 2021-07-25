@@ -104,9 +104,9 @@ export default function CarrersHero() {
             </motion.div>
 
             <motion.div variants={varFadeInRight}>
-              <Typography sx={{ py: 5, color: 'common.white' }}>
+              {/* <Typography sx={{ py: 5, color: 'common.white' }}>
                 To start your first product,
-              </Typography>
+              </Typography> */}
             </motion.div>
 
             <motion.div variants={varFadeInRight}>

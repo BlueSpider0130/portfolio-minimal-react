@@ -97,7 +97,9 @@ export default function LandingHero() {
                 >
                   &nbsp;striving for perfection.
                 </Typography>{' '}
-                Idea to serial production.
+                <Typography sx={{ py: 5, color: 'common.white' }}>
+                  Idea to serial production.
+                </Typography>
               </Typography>
             </motion.div>
 

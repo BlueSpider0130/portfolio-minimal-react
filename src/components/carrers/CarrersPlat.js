@@ -1,3 +1,4 @@
+import { Link as RouterLink } from 'react-router-dom';
 // material
 import {
   alpha,
@@ -10,7 +11,8 @@ import {
   Card,
   Container,
   Typography,
-  useMediaQuery
+  useMediaQuery,
+  Button
 } from '@material-ui/core';
 //
 import { varFadeInUp, MotionInView, varFadeInDown } from '../animate';
@@ -20,7 +22,7 @@ import { varFadeInUp, MotionInView, varFadeInDown } from '../animate';
 const CARDS = [
   {
     need: 'You need to have',
-    img: '/static/home/carrers-ar-dev.png',
+    task: 'Tasks',
     title: 'AR & VR Development',
     tasks:
       'Be in front of new and innovative services.Be part of team and reach goals together with the team.Provide cost effective and time effective services.',
@@ -31,6 +33,7 @@ const CARDS = [
   },
   {
     need: 'You need to have',
+    task: 'Tasks',
     img: '/static/home/carrers-mach.png',
     title: 'Mechanical engineer',
     tasks:
@@ -50,6 +53,7 @@ const CARDS = [
   // },
   {
     need: 'You need to have',
+    task: 'Tasks',
     img: '/static/home/carrers-indudesign.png',
     title: 'Industrial designer',
     tasks:
@@ -61,6 +65,7 @@ const CARDS = [
   },
   {
     need: 'You need to have',
+    task: 'Tasks',
     img: '/static/home/carrers-manage.png',
     title: 'Sales and project management',
     tasks:
@@ -69,6 +74,12 @@ const CARDS = [
       'A solid record of accomplishment and relevant experience. Good client management skills. A good understanding of the projects and the processes.',
     description:
       'We are always open for solid people in sales and project management. We are always looking to develop and grow into new fields and we need a good sales team and project managements to do it. '
+  },
+  {
+    // need: 'Open application for talents',
+    title: 'Open application for talents',
+    description:
+      'We are always looking for talented new team members. If you got talent, driven to be the best, willing to work hard and passionate about creating innovative new products feel free to send us your resume. We are looking for positive, result oriented team members with a winning mentality, which fundamentally understands that if the team wins, they win. '
   }
 ];
 
@@ -95,7 +106,7 @@ const CardStyle = styled(Card)(({ theme }) => {
   return {
     height: '100%',
     maxWidth: 1080,
-    minHeight: 440,
+    // minHeight: 440,
     margin: 'auto',
     textAlign: 'left',
     padding: theme.spacing(2, 5, 1),
@@ -166,7 +177,7 @@ export default function LandingMinimalHelps() {
                     {card.need_info}
                   </Typography>
                   <Typography variant="h6" align="left" mt={4}>
-                    Tasks
+                    {card.task}
                   </Typography>
                   <Typography
                     variant="h7"
@@ -175,6 +186,25 @@ export default function LandingMinimalHelps() {
                   >
                     {card.tasks}
                   </Typography>
+                  <Box
+                    sx={{
+                      width: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      marginTop: '15px'
+                    }}
+                  >
+                    <Button
+                      sx={{ width: '60%', margin: 'auto' }}
+                      size="large"
+                      color="inherit"
+                      variant="outlined"
+                      component={RouterLink}
+                      to="/contact"
+                    >
+                      Apply
+                    </Button>
+                  </Box>
                 </CardStyle>
               </MotionStyle>
             </Grid>

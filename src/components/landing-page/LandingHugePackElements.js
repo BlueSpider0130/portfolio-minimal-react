@@ -135,7 +135,7 @@ export default function LandingHugePackElements() {
                   variant="overline"
                   sx={{ color: 'text.secondary', display: 'block' }}
                 >
-                  Talent member need!
+                  We are always looking for talented co-workers
                 </Typography>
               </MotionInView>
 
@@ -161,7 +161,7 @@ export default function LandingHugePackElements() {
                   color="inherit"
                   variant="outlined"
                   component={RouterLink}
-                  to="#"
+                  to="/contact"
                 >
                   Apply
                 </Button>

@@ -23,15 +23,15 @@ const CARDS = [
     img: '/static/service/proto.png',
     title: 'Prototype design & Development',
     description:
-      'To provide a good result. We need to understand the projects and come up with our own ideas. We go in-debt and try to understand what our clients are to achieve with the products. We do what we can to have as cost and time effective process as possible by spending time on understanding the needs and requirements early on. '
+      'We create a visualization and working prototype of the concept'
   },
-  {
-    icon: '/static/icons/ic_code.svg',
-    img: '/static/service/vr.png',
-    title: 'AR & VR',
-    description:
-      'To get a good product, we need to explore different ideas and concepts. We provide a visual version of the concept. We create an easy accessible version of the concepts. We work together with our clients to discover new and unexplored opportunities. '
-  },
+  // {
+  //   icon: '/static/icons/ic_code.svg',
+  //   img: '/static/service/vr.png',
+  //   title: 'AR & VR',
+  //   description:
+  //     'To get a good product, we need to explore different ideas and concepts. We provide a visual version of the concept. We create an easy accessible version of the concepts. We work together with our clients to discover new and unexplored opportunities. '
+  // },
   {
     icon: '/static/brand/logo_single.svg',
     img: '/static/service/engineering.png',

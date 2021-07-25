@@ -40,9 +40,9 @@ export default function LandingCleanInterfaces() {
 
           <MotionInView variants={varFadeInUp}>
             <Typography variant="h2" paragraph>
-              We which are a groupe of passionate professionals which are
-              constantly looking to work and strivng for innovation through
-              creating new products and solutions.with a winning mentality.
+              We are a group of passionate professionals which are constantly
+              striving for innovation through creating new products and
+              solutions with a winning mentality.
             </Typography>
           </MotionInView>
         </ContentStyle>

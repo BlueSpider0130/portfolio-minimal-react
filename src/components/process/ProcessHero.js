@@ -104,9 +104,9 @@ export default function ProcessHero() {
             </motion.div>
 
             <motion.div variants={varFadeInRight}>
-              <Typography sx={{ py: 5, color: 'common.white' }}>
+              {/* <Typography sx={{ py: 5, color: 'common.white' }}>
                 To start your first product, please feel free to contact us!
-              </Typography>
+              </Typography> */}
             </motion.div>
 
             <motion.div variants={varFadeInRight}>

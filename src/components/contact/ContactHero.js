@@ -56,7 +56,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
   }
 }));
 
-// ----------------------------------------------------------------------
+// ---------------------------------------------------------------------- looking forward to solve new challanges.
 
 export default function ContactHero() {
   return (
@@ -64,18 +64,21 @@ export default function ContactHero() {
       <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
         <ContentStyle>
           <TextAnimate
-            text="Where"
+            text="We&nbsp;are"
             sx={{ color: 'primary.main' }}
             variants={varFadeInRight}
           />
           <br />
           <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
-            <TextAnimate text="to" sx={{ mr: 2 }} />
-            <TextAnimate text="find" sx={{ mr: 2 }} />
-            <TextAnimate text="us?" />
+            <TextAnimate
+              text="looking&nbsp;forward&nbsp;to&nbsp;solve"
+              sx={{ mr: 2 }}
+            />
+            <TextAnimate text="new" sx={{ mr: 2 }} />
+            <TextAnimate text="challanges." />
           </Box>
 
-          <Grid container spacing={5} sx={{ mt: 5, color: 'common.white' }}>
+          {/* <Grid container spacing={5} sx={{ mt: 5, color: 'common.white' }}>
             {CONTACTS.map((contact) => (
               <Grid
                 key={contact.country}
@@ -99,7 +102,7 @@ export default function ContactHero() {
                 </motion.div>
               </Grid>
             ))}
-          </Grid>
+          </Grid> */}
         </ContentStyle>
       </Container>
     </RootStyle>
