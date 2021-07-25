@@ -127,7 +127,7 @@ export default function LandingMinimalHelps() {
           </MotionInView>
           <MotionInView variants={varFadeInDown}>
             <Typography variant="h2" align="center">
-              Services listed
+              Services
             </Typography>
           </MotionInView>
         </Box>
