@@ -21,17 +21,17 @@ export default function ContactForm() {
         </MotionInView>
 
         <MotionInView variants={varFadeInUp}>
-          <TextField fullWidth label="Email" />
+          <TextField fullWidth label="E-mail" />
         </MotionInView>
 
-        <MotionInView variants={varFadeInUp}>
+        {/* <MotionInView variants={varFadeInUp}>
           <TextField fullWidth label="Subject" />
-        </MotionInView>
+        </MotionInView> */}
 
         <MotionInView variants={varFadeInUp}>
           <TextField
             fullWidth
-            label="Enter your message here."
+            label="Why we should hire you"
             multiline
             rows={4}
           />

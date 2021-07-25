@@ -35,7 +35,7 @@ const CARDS = [
     need: 'You need to have',
     task: 'Tasks',
     img: '/static/home/carrers-mach.png',
-    title: 'Mechanical engineer',
+    title: 'Engineer',
     tasks:
       'Understand the requirements of the project together with the team. Provide new and innovative ideas and solutions. Work progressively and proactive towards the team goal. Document report and quality insurance.',
     need_info:
@@ -55,7 +55,7 @@ const CARDS = [
     need: 'You need to have',
     task: 'Tasks',
     img: '/static/home/carrers-indudesign.png',
-    title: 'Industrial designer',
+    title: 'Designer',
     tasks:
       'Understand the requirements of the project and development. Develop the project together with the project manager and client.Work cost and time efficiently with a respobsilty towards the client and team. Think independently and come up with solution above the clients expectations. Provide a realistic timeframe and reports on progress.',
     need_info:
