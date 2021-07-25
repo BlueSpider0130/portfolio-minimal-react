@@ -210,7 +210,7 @@ export default function LandingMinimalHelps() {
             </Grid>
           ))}
         </Grid>
-        <MotionInView variants={varFadeInDown}>
+        {/* <MotionInView variants={varFadeInDown}>
           <Typography variant="h4" align="center">
             We are looking for talents we can help develop and grow together
             with us. We are looking If you are driven to be the best, willing to
@@ -218,7 +218,7 @@ export default function LandingMinimalHelps() {
             player. We need positive, productive, result orientated people,
             which takes on responsibility and deliver.
           </Typography>
-        </MotionInView>
+        </MotionInView> */}
       </Container>
     </RootStyle>
   );

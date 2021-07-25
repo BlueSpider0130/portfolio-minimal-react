@@ -131,16 +131,7 @@ export default function AboutWhat() {
                       : 'common.white'
                 }}
               >
-                We are a core group of hard working and driven professionals
-                with a passion for innovation and product development. We have a
-                diverse team with a lot of knowledge and varied experiences. We
-                do everything we can to be in front of innovation and offer the
-                latest services and technology available. We always strive to
-                improve our self and try to focus on improving our self as
-                individuals and as a team. We offer a various portfolio of
-                services and following the products from ideas to mass
-                production and we are very enthusiastic about providing the
-                newest services and solutions.
+                We are a passionate team with a winning mentality.
               </Typography>
             </MotionInView>
 
