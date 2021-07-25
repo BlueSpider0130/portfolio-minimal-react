@@ -72,7 +72,7 @@ const CARDS = [
   }
 ];
 
-const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
+// const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
@@ -145,7 +145,7 @@ export default function LandingMinimalHelps() {
         </Box>
 
         <Grid container spacing={isDesktop ? 10 : 5}>
-          {CARDS.map((card, index) => (
+          {CARDS.map((card) => (
             <Grid key={card.title} item xs={12} md={12}>
               <MotionStyle variants={varFadeInUp}>
                 <CardStyle>
