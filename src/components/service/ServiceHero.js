@@ -90,23 +90,23 @@ export default function LandingHero() {
           <ContentStyle>
             <motion.div variants={varFadeInRight}>
               <Typography variant="h1" sx={{ color: 'common.white' }}>
-                Build your
-                <br />
+                Develop your product or solution with
+                {/* <br /> */}
                 <Typography
                   component="span"
                   variant="h1"
                   sx={{ color: 'primary.main' }}
                 >
-                  &nbsp;Product
+                  &nbsp;Hannevig Solutions
                 </Typography>
               </Typography>
             </motion.div>
 
-            <motion.div variants={varFadeInRight}>
+            {/* <motion.div variants={varFadeInRight}>
               <Typography sx={{ py: 5, color: 'common.white' }}>
                 To start your first product, please feel free to contact us!
               </Typography>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div variants={varFadeInRight}>
               <Button

@@ -19,34 +19,56 @@ import { varFadeInUp, MotionInView, varFadeInDown } from '../animate';
 
 const CARDS = [
   {
-    icon: '/static/icons/ic_design.svg',
+    need: 'You need to have',
     img: '/static/home/carrers-ar-dev.png',
     title: 'AR & VR Development',
-    description: ''
+    tasks:
+      'Be in front of new and innovative services.Be part of team and reach goals together with the team.Provide cost effective and time effective services.',
+    need_info:
+      'Relevant education. Talented and in depended thinking. A proven record of accomplishment and good references. Cost, time and team oriented. Good personal and communication skills. ',
+    description:
+      'We always open for freethinking and in depended developers with a passion for innovation and new technologies.'
   },
   {
-    icon: '/static/icons/ic_code.svg',
+    need: 'You need to have',
     img: '/static/home/carrers-mach.png',
     title: 'Mechanical engineer',
-    description: ''
+    tasks:
+      'Understand the requirements of the project together with the team. Provide new and innovative ideas and solutions. Work progressively and proactive towards the team goal. Document report and quality insurance.',
+    need_info:
+      'A winner mentality and be result orientated. Relevant education.Been part of a team and understand team play. Relevant experience and network.',
+    description:
+      'We are always open for engineers, which can build solid products over time. We are hoping to find indented high preforming individuals, with a passion for innovation, which can work as a team to achieve high-level results. '
   },
+  // {
+  //   need: '/static/brand/logo_single.svg',
+  //   img: '/static/home/carrers-ele.png',
+  //   title: 'Electrical engineer',
+  //   tasks: '',
+  //   need_info: '',
+  //   description: ''
+  // },
   {
-    icon: '/static/brand/logo_single.svg',
-    img: '/static/home/carrers-ele.png',
-    title: 'Electrical engineer',
-    description: ''
-  },
-  {
-    icon: '/static/icons/ic_design.svg',
+    need: 'You need to have',
     img: '/static/home/carrers-indudesign.png',
     title: 'Industrial designer',
-    description: ''
+    tasks:
+      'Understand the requirements of the project and development. Develop the project together with the project manager and client.Work cost and time efficiently with a respobsilty towards the client and team. Think independently and come up with solution above the clients expectations. Provide a realistic timeframe and reports on progress.',
+    need_info:
+      'Free and independent mind.Interest and passion for what you the field.Relevant education and experience. ',
+    description:
+      'We are always open for designers with a passion for what they do and interest for design and solutions.  Which can understand the requirements, explore exiting ideas and work independently. '
   },
   {
-    icon: '/static/icons/ic_design.svg',
+    need: 'You need to have',
     img: '/static/home/carrers-manage.png',
     title: 'Sales and project management',
-    description: ''
+    tasks:
+      'Find and sell projects. Indebt understand what the goals of the project is about Agree on terms, delivery and costs. Follow the projects up, keep a dialog with the clients and the team involved in the project, and ensure we deliver exactly what is accordance to their needs. Ideally that we deliver above expectations. Follow up relationships post-delivery. ',
+    need_info:
+      'A solid record of accomplishment and relevant experience. Good client management skills. A good understanding of the projects and the processes.',
+    description:
+      'We are always open for solid people in sales and project management. We are always looking to develop and grow into new fields and we need a good sales team and project managements to do it. '
   }
 ];
 
@@ -60,6 +82,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const MotionStyle = styled('div')(() => ({
+  // width: '80%',
   height: '100%'
 }));
 
@@ -71,52 +94,19 @@ const CardStyle = styled(Card)(({ theme }) => {
 
   return {
     height: '100%',
-    maxWidth: 380,
+    maxWidth: 1080,
     minHeight: 440,
     margin: 'auto',
-    textAlign: 'center',
-    padding: theme.spacing(10, 5, 1),
+    textAlign: 'left',
+    padding: theme.spacing(2, 5, 1),
     boxShadow: `-40px 40px 80px 0 ${shadowCard(0.48)}`,
     [theme.breakpoints.up('md')]: {
       boxShadow: 'none',
       backgroundColor:
         theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800]
-    },
-    '&.cardLeft': {
-      // [theme.breakpoints.up('md')]: { marginTop: -40 }
-    },
-    '&.cardCenter': {
-      // [theme.breakpoints.up('md')]: {
-      //   marginTop: -80,
-      //   backgroundColor: theme.palette.background.paper,
-      //   boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
-      //   '&:before': {
-      //     top: 0,
-      //     left: 0,
-      //     right: 0,
-      //     bottom: 0,
-      //     zIndex: -1,
-      //     content: "''",
-      //     margin: 'auto',
-      //     position: 'absolute',
-      //     width: 'calc(100% - 40px)',
-      //     height: 'calc(100% - 40px)',
-      //     borderRadius: theme.shape.borderRadiusMd,
-      //     backgroundColor: theme.palette.background.paper,
-      //     boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`
-      //   }
-      // }
     }
   };
 });
-
-const CardIconStyle = styled('img')(({ theme }) => ({
-  // width: '100%',
-  // height: '100%',
-  margin: 'auto',
-  marginBottom: theme.spacing(10),
-  filter: shadowIcon(theme.palette.primary.main)
-}));
 
 // ----------------------------------------------------------------------
 
@@ -156,31 +146,34 @@ export default function LandingMinimalHelps() {
 
         <Grid container spacing={isDesktop ? 10 : 5}>
           {CARDS.map((card, index) => (
-            <Grid key={card.title} item xs={12} md={4}>
+            <Grid key={card.title} item xs={12} md={12}>
               <MotionStyle variants={varFadeInUp}>
-                <CardStyle
-                  className={
-                    (index === 0 && 'cardLeft') || (index === 1 && 'cardCenter')
-                  }
-                >
-                  {/* <CardMedia image={card.img} title="Paella dish" /> */}
-                  <CardIconStyle
-                    src={card.img}
-                    alt={card.title}
-                    sx={{
-                      ...(index === 0 && {
-                        filter: (theme) => shadowIcon(theme.palette.info.main)
-                      }),
-                      ...(index === 1 && {
-                        filter: (theme) => shadowIcon(theme.palette.error.main)
-                      })
-                    }}
-                  />
-                  <Typography variant="h5" paragraph>
+                <CardStyle>
+                  <Typography variant="h3" paragraph>
                     {card.title}
                   </Typography>
                   <Typography sx={{ color: 'text.secondary' }}>
                     {card.description}
+                  </Typography>
+                  <Typography variant="h6" align="right" mt={3}>
+                    {card.need}
+                  </Typography>
+                  <Typography
+                    variant="h7"
+                    align="center"
+                    sx={{ color: 'text.secondary' }}
+                  >
+                    {card.need_info}
+                  </Typography>
+                  <Typography variant="h6" align="left" mt={4}>
+                    Tasks
+                  </Typography>
+                  <Typography
+                    variant="h7"
+                    align="center"
+                    sx={{ color: 'text.secondary' }}
+                  >
+                    {card.tasks}
                   </Typography>
                 </CardStyle>
               </MotionStyle>

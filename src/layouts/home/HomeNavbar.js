@@ -32,7 +32,7 @@ import MenuPopover from '../../components/MenuPopover';
 // ----------------------------------------------------------------------
 
 const MENU_LINKS = [
-  { title: 'Service', icon: homeFill, href: PATH_HOME.service },
+  { title: 'Services', icon: homeFill, href: PATH_HOME.service },
   { title: 'Process', icon: roundSpeed, href: PATH_HOME.process },
   { title: 'Careers', icon: 'WorkOutlineIcon', href: PATH_HOME.careers },
   { title: 'About us', icon: roundSpeed, href: PATH_HOME.about }

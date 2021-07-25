@@ -96,7 +96,8 @@ export default function LandingHero() {
                   sx={{ color: 'primary.main' }}
                 >
                   &nbsp;striving for perfection.
-                </Typography>
+                </Typography>{' '}
+                Idea to serial production.
               </Typography>
             </motion.div>
 

@@ -9,7 +9,7 @@ export default function Logo({ ...other }) {
       component="img"
       alt="logo"
       src="/static/brand/logo.png"
-      height={40}
+      height={70}
       {...other}
     />
   );

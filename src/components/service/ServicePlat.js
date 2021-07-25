@@ -37,7 +37,7 @@ const CARDS = [
     img: '/static/service/engineering.png',
     title: 'Engineering',
     description:
-      'We strive to make products and solutions above the expectations of our clients. We provide a working prototype. We test the functionalities; evaluate different solutions, material and solutions. We work together our clients to constantly improve the  prototype towards perfection.'
+      'We provide a diverse list of engineering services and solutions. Mechanical engineering - Industrial engineering - Software engineering - Chemical engineering - Electrical Engineering.'
   },
   {
     icon: '/static/icons/ic_design.svg',
@@ -48,10 +48,17 @@ const CARDS = [
   },
   {
     icon: '/static/icons/ic_design.svg',
+    img: '/static/service/iot.png',
+    title: 'IOT',
+    description:
+      'Connecting products to your computer and phone is the future. We offer services, which facilitates the connection between the phone and computer and the products. '
+  },
+  {
+    icon: '/static/icons/ic_design.svg',
     img: '/static/service/team.png',
     title: 'Recruitment and team management',
     description:
-      'We establish and maintain manufacturing. We find the most suitable manufacturer; we ensure manufacturing is accoorandce to the requirements '
+      'We provide recruitment of team members for an in-house design and development team, which can specialize in products the company, develops. We provide management of the development, to ensure the development are achieving optimal results.'
   }
 ];
 
